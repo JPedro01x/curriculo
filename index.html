@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - João Pedro de Carvalho Bernardo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Botão de alternância de tema -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Menu de navegação -->
+    <nav class="nav-menu" id="nav-menu">
+        <button class="nav-close" id="nav-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#sobre" onclick="closeNav()">Sobre Mim</a></li>
+            <li><a href="#objetivo" onclick="closeNav()">Objetivo</a></li>
+            <li><a href="#formacao" onclick="closeNav()">Formação</a></li>
+            <li><a href="#habilidades" onclick="closeNav()">Habilidades</a></li>
+            <li><a href="habilidade.html">Habilidades Técnicas</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay do menu -->
+    <div class="nav-overlay" id="nav-overlay" onclick="closeNav()"></div>
+
+    <header class="header fade-in">
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="header-content">
+            <div class="profile-image-container">
+                <img src="WhatsApp Image 2025-08-19 at 11.20.20.jpeg" alt="Foto de João Pedro" class="profile-image">
+                <div class="profile-status"></div>
+            </div>
+            <div class="header-info">
+                <h1 class="typing-animation">João Pedro de Carvalho Bernardo</h1>
+                <p class="subtitle">Desenvolvedor Frontend | Análise e Desenvolvimento de Sistemas</p>
+                <div class="contato">
+                    <p><i class="fas fa-phone"></i> <a href="tel:(87) 99137-3783">(87) 99137-3783</a> | <a href="tel:(87) 99135-5568">(87) 99135-5568</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:joaopedrob882@gmail.com">joaopedrob882@gmail.com</a></p>
+                    <p><i class="fas fa-birthday-cake"></i> 09/06/2006 (19 anos)</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sertânia/PE</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre" class="section-animate">
+        <h2><i class="fas fa-user"></i> Sobre Mim</h2>
+        <div class="content-card">
+            <p>Sou um jovem em busca da primeira oportunidade no mercado de trabalho, motivado a aprender, crescer e me desenvolver profissionalmente. Tenho formação técnica em informática e atualmente estou cursando graduação em tecnologia. Possuo facilidade com tecnologia, resolução de problemas e espírito de equipe. Busco contribuir com minha dedicação e vontade de evoluir constantemente.</p>
+
+        </div>
+    </section>
+
+    <section id="objetivo" class="section-animate">
+        <h2><i class="fas fa-bullseye"></i> Objetivo</h2>
+        <div class="content-card objective-card">
+            <p>Ingressar no mercado de trabalho na área de Tecnologia, onde eu possa aplicar meus conhecimentos técnicos, adquirir experiência prática e crescer profissionalmente, contribuindo para o sucesso da empresa com dedicação e responsabilidade.</p>
+            <div class="objective-tags">
+                <span class="tag">Frontend</span>
+                <span class="tag">Desenvolvimento</span>
+                <span class="tag">Tecnologia</span>
+                <span class="tag">Inovação</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="formacao" class="section-animate">
+        <h2><i class="fas fa-graduation-cap"></i> Formação</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker current"></div>
+                <div class="timeline-content">
+                    <h3>Análise e Desenvolvimento de Sistemas (ADS)</h3>
+                    <p class="period">2024 – Atualmente</p>
+                    <p class="institution"><a href="https://www.aesa-cesa.br/" target="_blank"><i class="fas fa-external-link-alt"></i> AESA - CESA</a></p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="50"></div>
+                    </div>
+                    <span class="progress-text">Em andamento</span>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker completed"></div>
+                <div class="timeline-content">
+                    <h3>Curso Técnico em Redes de Computadores</h3>
+                    <p class="period">2020 – 2023</p>
+                    <p class="institution"><a href="https://www.instagram.com/etesertania/" target="_blank"><i class="fas fa-external-link-alt"></i> ETE-Sertânia</a></p>
+                    <div class="progress-bar">
+                        <div class="progress-fill completed" data-progress="100"></div>
+                    </div>
+                    <span class="progress-text">Concluído</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades" class="section-animate">
+        <h2><i class="fas fa-cogs"></i> Habilidades</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Habilidades Técnicas</h3>
+                <div class="skill-item">
+                    <span class="skill-name">HTML</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="75"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="70"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="68"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Redes de Computadores</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="75"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Pacote Office</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-skill="85"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <div class="soft-skills">
+                    <span class="soft-skill"><i class="fas fa-users"></i> Trabalho em Equipe</span>
+                    <span class="soft-skill"><i class="fas fa-lightbulb"></i> Resolução de Problemas</span>
+                    <span class="soft-skill"><i class="fas fa-rocket"></i> Proatividade</span>
+                    <span class="soft-skill"><i class="fas fa-heart"></i> Dedicação</span>
+                </div>
+            </div>
+        </div>
+        <div class="cta-button">
+            <a href="habilidade.html" class="btn-primary">
+                <i class="fas fa-arrow-right"></i> Mais detalhes sobre Habilidades Técnicas
+            </a>
+        </div>
+    </section>
+
+    <!-- Botão de voltar ao topo -->
+    <button id="back-to-top" class="back-to-top" title="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 João Pedro de Carvalho Bernardo. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="mailto:joaopedrob882@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:(87) 99137-3783" title="Telefone"><i class="fas fa-phone"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
