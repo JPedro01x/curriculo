@@ -1,8 +1,4 @@
-// Currículo Interativo - JavaScript
-// João Pedro de Carvalho Bernardo
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar todas as funcionalidades
     initThemeToggle();
     initMobileMenu();
     initScrollEffects();
@@ -14,12 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
 });
 
-// Alternância de tema claro/escuro
 function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
-    
-    // Verificar tema salvo no localStorage
+  
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         body.setAttribute('data-theme', savedTheme);
@@ -33,8 +27,7 @@ function initThemeToggle() {
         body.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
-        
-        // Adicionar efeito visual
+    
         themeToggle.style.transform = 'scale(0.9)';
         setTimeout(() => {
             themeToggle.style.transform = 'scale(1)';
@@ -47,7 +40,6 @@ function updateThemeIcon(theme) {
     icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 }
 
-// Menu mobile
 function initMobileMenu() {
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
@@ -57,8 +49,7 @@ function initMobileMenu() {
     menuToggle.addEventListener('click', openNav);
     navClose.addEventListener('click', closeNav);
     navOverlay.addEventListener('click', closeNav);
-    
-    // Fechar menu ao pressionar ESC
+ 
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             closeNav();
@@ -84,7 +75,6 @@ function closeNav() {
     document.body.style.overflow = '';
 }
 
-// Efeitos de scroll
 function initScrollEffects() {
     const sections = document.querySelectorAll('.section-animate');
     
@@ -94,7 +84,6 @@ function initScrollEffects() {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
                 
-                // Animar elementos filhos
                 animateChildElements(entry.target);
             }
         });
@@ -109,13 +98,11 @@ function initScrollEffects() {
 }
 
 function animateChildElements(section) {
-    // Animar estatísticas
     const stats = section.querySelectorAll('.stat-number');
     stats.forEach(stat => {
         animateCounter(stat);
     });
     
-    // Animar barras de habilidade
     const skillBars = section.querySelectorAll('.skill-progress');
     skillBars.forEach(bar => {
         const skill = bar.getAttribute('data-skill');
@@ -123,8 +110,7 @@ function animateChildElements(section) {
             bar.style.width = skill + '%';
         }, 300);
     });
-    
-    // Animar barras de progresso
+  
     const progressBars = section.querySelectorAll('.progress-fill');
     progressBars.forEach(bar => {
         const progress = bar.getAttribute('data-progress');
@@ -134,9 +120,7 @@ function animateChildElements(section) {
     });
 }
 
-// Animações de entrada
 function initAnimations() {
-    // Animação de digitação para o nome
     const typingElement = document.querySelector('.typing-animation');
     if (typingElement) {
         const text = typingElement.textContent;
@@ -150,7 +134,6 @@ function initAnimations() {
                 i++;
                 setTimeout(typeWriter, 100);
             } else {
-                // Remover cursor após completar
                 setTimeout(() => {
                     typingElement.style.borderRight = 'none';
                 }, 1000);
@@ -159,15 +142,12 @@ function initAnimations() {
         
         setTimeout(typeWriter, 1000);
     }
-    
-    // Animação de entrada das seções
     const sections = document.querySelectorAll('section');
     sections.forEach((section, index) => {
         section.style.animationDelay = `${index * 0.2}s`;
     });
 }
 
-// Barras de habilidades animadas
 function initSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
     
@@ -176,8 +156,6 @@ function initSkillBars() {
             if (entry.isIntersecting) {
                 const skillLevel = entry.target.getAttribute('data-skill');
                 entry.target.style.width = skillLevel + '%';
-                
-                // Adicionar texto de porcentagem
                 const skillItem = entry.target.closest('.skill-item');
                 const skillName = skillItem.querySelector('.skill-name');
                 if (!skillName.querySelector('.skill-percentage')) {
@@ -194,8 +172,6 @@ function initSkillBars() {
     
     skillBars.forEach(bar => observer.observe(bar));
 }
-
-// Contadores animados
 function initCounters() {
     function animateCounter(element) {
         const target = parseInt(element.getAttribute('data-target'));
@@ -225,8 +201,6 @@ function initCounters() {
     
     counters.forEach(counter => observer.observe(counter));
 }
-
-// Barras de progresso da timeline
 function initProgressBars() {
     const progressBars = document.querySelectorAll('.progress-fill');
     
@@ -243,8 +217,6 @@ function initProgressBars() {
     
     progressBars.forEach(bar => observer.observe(bar));
 }
-
-// Botão voltar ao topo
 function initBackToTop() {
     const backToTopButton = document.getElementById('back-to-top');
     
@@ -263,8 +235,6 @@ function initBackToTop() {
         });
     });
 }
-
-// Scroll suave para links internos
 function initSmoothScroll() {
     const links = document.querySelectorAll('a[href^="#"]');
     
@@ -282,15 +252,11 @@ function initSmoothScroll() {
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-                
-                // Fechar menu mobile se estiver aberto
                 closeNav();
             }
         });
     });
 }
-
-// Efeitos de hover para cards
 document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.content-card, .timeline-content, .stat-item');
     
@@ -304,8 +270,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-// Efeito de partículas no header (opcional)
 function createParticles() {
     const header = document.querySelector('.header');
     const particlesContainer = document.createElement('div');
@@ -335,8 +299,6 @@ function createParticles() {
         `;
         particlesContainer.appendChild(particle);
     }
-    
-    // Adicionar animação CSS para as partículas
     const style = document.createElement('style');
     style.textContent = `
         @keyframes float {
@@ -348,42 +310,26 @@ function createParticles() {
     
     header.appendChild(particlesContainer);
 }
-
-// Inicializar partículas após carregamento
 window.addEventListener('load', createParticles);
-
-// Adicionar efeitos de loading
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-    
-    // Remover qualquer loader se existir
     const loader = document.querySelector('.loader');
     if (loader) {
         loader.style.opacity = '0';
         setTimeout(() => loader.remove(), 500);
     }
 });
-
-// Detectar dispositivo móvel para otimizações
 function isMobile() {
     return window.innerWidth <= 768;
 }
-
-// Otimizações para mobile
 if (isMobile()) {
-    // Reduzir animações em dispositivos móveis para melhor performance
     document.documentElement.style.setProperty('--transition', 'all 0.2s ease');
 }
-
-// Adicionar eventos de teclado para acessibilidade
 document.addEventListener('keydown', function(e) {
-    // Navegação por teclado no menu
     if (e.key === 'Tab') {
         const focusableElements = document.querySelectorAll(
             'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
         );
-        
-        // Adicionar indicador visual de foco
         focusableElements.forEach(el => {
             el.addEventListener('focus', function() {
                 this.style.boxShadow = '0 0 0 2px var(--accent-color)';

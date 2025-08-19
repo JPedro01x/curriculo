@@ -44,8 +44,6 @@ body {
     transition: var(--transition);
     overflow-x: hidden;
 }
-
-/* Animações */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
@@ -70,8 +68,6 @@ body {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.05); }
 }
-
-/* Botão de tema */
 .theme-toggle {
     position: fixed;
     top: 20px;
@@ -95,8 +91,6 @@ body {
     transform: scale(1.1);
     box-shadow: var(--shadow-lg);
 }
-
-/* Menu de navegação */
 .menu-toggle {
     display: none;
     background: none;
@@ -182,8 +176,6 @@ body {
     opacity: 1;
     visibility: visible;
 }
-
-/* Header */
 .header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
@@ -354,8 +346,6 @@ section h2 i {
     border: 1px solid var(--border-color);
     margin-top: 20px;
 }
-
-/* Estatísticas destacadas */
 .highlight-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -391,8 +381,6 @@ section h2 i {
     color: var(--text-light);
     font-weight: 500;
 }
-
-/* Tags de objetivo */
 .objective-tags {
     display: flex;
     flex-wrap: wrap;
@@ -414,8 +402,6 @@ section h2 i {
     transform: scale(1.05);
     box-shadow: var(--shadow);
 }
-
-/* Timeline */
 .timeline {
     position: relative;
     padding-left: 30px;
@@ -521,8 +507,6 @@ section h2 i {
     color: var(--text-light);
     font-weight: 500;
 }
-
-/* Habilidades */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -612,8 +596,6 @@ section h2 i {
 .soft-skill i {
     font-size: 0.8rem;
 }
-
-/* Botão CTA */
 .cta-button {
     text-align: center;
     margin-top: 30px;
@@ -638,8 +620,6 @@ section h2 i {
     box-shadow: var(--shadow-lg);
     background: linear-gradient(135deg, #2563eb, #7c3aed);
 }
-
-/* Botão voltar ao topo */
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -667,8 +647,6 @@ section h2 i {
     transform: scale(1.1);
     box-shadow: var(--shadow-lg);
 }
-
-/* Footer */
 .footer {
     background: var(--primary-color);
     color: white;
@@ -717,8 +695,6 @@ a:hover {
     text-decoration: underline;
     color: var(--text-color);
 }
-
-/* Responsividade */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -844,15 +820,11 @@ a:hover {
 .info p {
     margin-bottom: 5px;
 }
-
-/* Animações de entrada */
 .section-animate:nth-child(1) { animation-delay: 0.1s; }
 .section-animate:nth-child(2) { animation-delay: 0.2s; }
 .section-animate:nth-child(3) { animation-delay: 0.3s; }
 .section-animate:nth-child(4) { animation-delay: 0.4s; }
 .section-animate:nth-child(5) { animation-delay: 0.5s; }
-
-/* Melhorias de acessibilidade */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -860,15 +832,11 @@ a:hover {
         transition-duration: 0.01ms !important;
     }
 }
-
-/* Estados de foco para acessibilidade */
 button:focus,
 a:focus {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
-
-/* Scrollbar personalizada */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -885,8 +853,6 @@ a:focus {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
 }
-
-/* Estilos específicos para página de habilidades */
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1063,8 +1029,6 @@ a:focus {
 .navigation-buttons {
     margin-top: 20px;
 }
-
-/* Responsividade para página de habilidades */
 @media (max-width: 768px) {
     .tech-grid {
         grid-template-columns: 1fr;
